@@ -1,7 +1,7 @@
 import React from "react";
 import "./container.css";
 import Buttons from "../buttons/Buttons";
-import Amount from "../total/total";
+import Amount from "../total/Amount";
 // import Person from "../../assets./icon-person.svg";
 function Container(props) {
   // console.log(props.inputValue);
