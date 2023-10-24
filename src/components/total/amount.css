@@ -1,0 +1,46 @@
+.tip-amount {
+  display: flex;
+  gap: 87px;
+  align-items: center;
+}
+.total-person {
+  display: flex;
+  align-items: center;
+  gap: 132px;
+  margin-top: 20px;
+}
+.reset {
+  width: 281px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #26c2ae;
+  margin-top: 35px;
+  color: #00474b;
+  font-size: 20px;
+  font-weight: 700;
+}
+.box {
+  border-radius: 15px;
+  background: #00474b;
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  padding: 39px 22px 24px 24px;
+}
+#person {
+  color: #7f9d9f;
+  font-size: 13px;
+}
+.x {
+  color: #fff;
+  font-size: 16px;
+  white-space: pre;
+}
+.number {
+  color: #26c2ae;
+  text-align: right;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.667px;
+}

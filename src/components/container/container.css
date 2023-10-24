@@ -1,0 +1,41 @@
+.container {
+  border-radius: 25px 25px 0px 0px;
+  background: #fff;
+  box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+  width: 375px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  padding: 32px;
+}
+input {
+  width: 311px;
+  border-radius: 5px;
+  background: #f3f9fa;
+  color: #547878;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 6px 0;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 17px;
+}
+.second-input {
+  background-image: url(../../assets/icon-person.svg);
+}
+.first-input {
+  background-image: url(../../assets/icon-dollar.svg);
+}
+.bill-input-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.title {
+  color: #5e7a7d;
+  font-size: 16px;
+  font-weight: 700;
+}
