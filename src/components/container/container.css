@@ -23,10 +23,10 @@ input {
   background-position-y: center;
   background-position-x: 17px;
 }
-.second-input {
+.peoples-input {
   background-image: url(../../assets/icon-person.svg);
 }
-.first-input {
+.bill-input {
   background-image: url(../../assets/icon-dollar.svg);
 }
 .bill-input-div {
@@ -38,4 +38,21 @@ input {
   color: #5e7a7d;
   font-size: 16px;
   font-weight: 700;
+}
+.second-input-div {
+  display: flex;
+  flex-direction: column;
+}
+.error {
+  color: #e17457;
+  text-align: right;
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.number {
+  width: 130px;
 }

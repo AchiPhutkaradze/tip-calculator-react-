@@ -1,12 +1,12 @@
 .tip-amount {
   display: flex;
-  gap: 87px;
+  gap: 61px;
   align-items: center;
 }
 .total-person {
   display: flex;
   align-items: center;
-  gap: 132px;
+  gap: 103px;
   margin-top: 20px;
 }
 .reset {
@@ -26,6 +26,7 @@
   width: 327px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding: 39px 22px 24px 24px;
 }
 #person {

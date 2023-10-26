@@ -1,20 +1,30 @@
 import "./amount.css";
-import React, { useRef, useEffect } from "react";
+import PropTypes from "prop-types";
+
+Amount.propTypes = {
+  inputValue: PropTypes.number.isRequired,
+  button: PropTypes.number.isRequired,
+  nmbPeople: PropTypes.number.isRequired,
+};
 
 export default function Amount(props) {
-  const divRef = useRef(null);
-  useEffect(() => {
-    if (divRef.current) {
-      let textContent = divRef.current.textContent;
-    }
-  });
-  console.log(divRef.current);
+  const tipAmount = (
+    ((props.inputValue / 100) * props.button) /
+    props.nmbPeople
+  ).toFixed(2);
 
-  function reset() {
-    return null;
-  }
-  // console.log(divRef.current);
+  const total = (props.inputValue / props.nmbPeople + props.inputValue);
 
+  console.log(tipAmount);
+
+  const reset = () => {
+    props.setInputValue(null);
+    props.setNmbPeople(null);
+    props.setButton(null);
+  };
+
+  //custom functionalization
+  console.log(props.reset);
   return (
     <>
       <div className="box">
@@ -25,12 +35,9 @@ export default function Amount(props) {
           </p>
           <div
             className="number"
-            ref={divRef}
-            onChange={() => {
-              reset;
-            }}
+            // onChange={(e) => props.setReset(e.target.textContent)}
           >
-            {((props.inputValue / 100) * props.button) / props.nmbPeople}
+            {!isNaN(tipAmount) && isFinite(tipAmount) ? tipAmount : "$00.00"}
           </div>
         </div>
         <div className="total-person">
@@ -38,7 +45,9 @@ export default function Amount(props) {
             Total <br />
             <span id="person">/person</span>
           </p>
-          <span className="number">{props.inputValue / props.nmbPeople}</span>
+          <span className="number">
+            {!isNaN(total) && isFinite(total) ? total : "$00.00"}
+          </span>
         </div>
         <button className="reset" onClick={reset}>
           RESET
