@@ -6,8 +6,7 @@ Buttons.propTypes = {
 };
 export default function Buttons(props) {
   const numbers = [5, 10, 15, 25, 50];
-  console.log(props.button);
-  console.log(props.anyNumber);
+
   return (
     <>
       <div className="buttons">
@@ -31,7 +30,6 @@ export default function Buttons(props) {
           type="number"
           className="custom"
           placeholder="Custom"
-          // value={`${props.anyNumber}%`}
           onChange={(e) => props.setButton(parseInt(e.target.value))}
         />
       </div>

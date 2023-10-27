@@ -2,29 +2,32 @@ import "./amount.css";
 import PropTypes from "prop-types";
 
 Amount.propTypes = {
-  inputValue: PropTypes.number.isRequired,
-  button: PropTypes.number.isRequired,
-  nmbPeople: PropTypes.number.isRequired,
+  inputValue: PropTypes.any,
+  button: PropTypes.any,
+  nmbPeople: PropTypes.any,
+  setInputValue: PropTypes.any,
+  setButton: PropTypes.any,
+  setNmbPeople: PropTypes.any,
+  reset: PropTypes.any,
 };
 
 export default function Amount(props) {
   const tipAmount = (
-    ((props.inputValue / 100) * props.button) /
-    props.nmbPeople
+    ((Number(props.inputValue) / 100) * Number(props.button)) /
+    Number(props.nmbPeople)
   ).toFixed(2);
 
-  const total = (props.inputValue / props.nmbPeople + props.inputValue);
-
-  console.log(tipAmount);
+  const total = (
+    Number(props.inputValue) / Number(props.nmbPeople) +
+    Number(tipAmount)
+  ).toFixed(2);
 
   const reset = () => {
-    props.setInputValue(null);
-    props.setNmbPeople(null);
-    props.setButton(null);
+    props.setInputValue("");
+    props.setNmbPeople("");
+    props.setButton("");
   };
 
-  //custom functionalization
-  console.log(props.reset);
   return (
     <>
       <div className="box">
@@ -33,10 +36,7 @@ export default function Amount(props) {
             Tip Amount <br />
             <span id="person">/person</span>
           </p>
-          <div
-            className="number"
-            // onChange={(e) => props.setReset(e.target.textContent)}
-          >
+          <div className="number">
             {!isNaN(tipAmount) && isFinite(tipAmount) ? tipAmount : "$00.00"}
           </div>
         </div>

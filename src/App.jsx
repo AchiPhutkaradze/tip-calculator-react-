@@ -5,18 +5,18 @@ import Logo from "./assets/logo.svg";
 import "./app.css";
 
 App.propTypes = {
-  setInputValue: PropTypes.func.isRequired,
-  inputValue: PropTypes.string.isRequired,
-  button: PropTypes.string.isRequired,
-  setButton: PropTypes.func.isRequired,
-  nmbPeople: PropTypes.number.isRequired,
-  setNmbPeople: PropTypes.func.isRequired,
+  setInputValue: PropTypes.any,
+  inputValue: PropTypes.any,
+  button: PropTypes.any,
+  setButton: PropTypes.any,
+  nmbPeople: PropTypes.any,
+  setNmbPeople: PropTypes.any,
 };
 function App() {
-  const [button, setButton] = useState(null);
-  const [inputValue, setInputValue] = useState(null);
-  const [nmbPeople, setNmbPeople] = useState(null);
-  const [anyNumber, setAnyNumber] = useState(null);
+  const [button, setButton] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [nmbPeople, setNmbPeople] = useState("");
+  const [anyNumber, setAnyNumber] = useState("");
   return (
     <>
       <div className="logo">
