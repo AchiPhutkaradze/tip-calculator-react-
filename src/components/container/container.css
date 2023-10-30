@@ -33,6 +33,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 6px;
 }
 .title {
   color: #5e7a7d;
@@ -42,6 +43,7 @@ input {
 .second-input-div {
   display: flex;
   flex-direction: column;
+  margin-top: 32px;
 }
 .error {
   color: #e17457;
@@ -55,4 +57,43 @@ input {
 
 .number {
   width: 130px;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 920px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+    border-radius: 25px;
+  }
+  .div-desk {
+    flex-direction: column;
+    display: flex;
+    padding: 45px 48px 48px 48px;
+  }
+  .error {
+    text-align: left;
+  }
+  .second-input-div {
+    margin-top: 40px;
+    gap: 6px;
+  }
+  .cm {
+    padding: 6px 17px 6px 0;
+    width: 379px;
+    border-radius: 5px;
+    border: 2px solid #e17052;
+    background: #f3f9fa;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 17px;
+  }
+
+  input:hover {
+    border: 2px solid #26c2ae;
+    background: #f3f9fa;
+    cursor: pointer;
+  }
 }

@@ -45,3 +45,26 @@
   font-weight: 700;
   letter-spacing: -0.667px;
 }
+
+@media screen and (min-width: 1440px) {
+  .box {
+    width: 413px;
+    margin: 32px 32px 32px 0;
+    padding: 56px 40px 40px 40px;
+  }
+  .reset {
+    margin-top: 134px;
+    width: 100%;
+  }
+  .total-person {
+    margin-top: 41px;
+    gap: 103px;
+  }
+  .tip-amount {
+    gap: 55px;
+  }
+  .number {
+    font-size: 48px;
+    width: 100%;
+  }
+}

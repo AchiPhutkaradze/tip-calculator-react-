@@ -28,7 +28,7 @@ function Container(props) {
             </span>
             <input
               type="number"
-              className="bill-input"
+              className="bill-input cm"
               value={props.inputValue}
               onChange={(e) => props.setInputValue(e.target.value)}
               placeholder="0"
@@ -51,7 +51,7 @@ function Container(props) {
             </span>
             <input
               type="number"
-              className="peoples-input"
+              className="peoples-input cm"
               placeholder="0"
               value={props.nmbPeople}
               onChange={(e) => props.setNmbPeople(e.target.value)}
